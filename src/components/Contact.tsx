@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { content } from "@/src/app/content";
 
 const Contact = () => {
-  const { Contact } = content;
+  const { contact } = content;
   const form = useRef<HTMLFormElement>(null); // ✅ sửa ở đây
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,16 +39,16 @@ const Contact = () => {
       <Toaster />
       <div className="md:container px-5 py-14">
         <h2 className="title !text-white" data-aos="fade-down">
-          {Contact.title}
+          {contact.title}
         </h2>
         <h4 className="subtitle" data-aos="fade-down">
-          {Contact.subtitle}
+          {contact.subtitle}
         </h4>
         <br />
         <div className="flex gap-10 md:flex-row flex-col">
          
           <div className="flex-1 flex flex-col gap-5">
-            {Contact.social_media.map((content, i) => (
+            {contact.social_media.map((content, i) => (
               <div
                 key={i}
                 data-aos="fade-down"

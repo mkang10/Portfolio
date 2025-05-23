@@ -28,15 +28,15 @@ const customStyles = {
 };
 
 const Projects = () => {
-  const { Projects } = content;
+  const { projects } = content;
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<{
     title: string;
-    image: StaticImageData;
+    image: string;
     description: string;
   } | null>(null);
 
-  const openModal = (proj: typeof Projects.project_content[0]) => {
+  const openModal = (proj: typeof projects.project_content[0]) => {
     setSelectedProject(proj);
     setIsOpen(true);
   };
@@ -89,17 +89,17 @@ const Projects = () => {
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
         <div>
           <h2 className="title" data-aos="fade-down">
-            {Projects.title}
+            {projects.title}
           </h2>
           <h4 className="subtitle" data-aos="fade-down">
-            {Projects.subtitle}
+            {projects.subtitle}
           </h4>
           <br />
         </div>
 
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
           <Image
-            src={Projects.image}
+            src={projects.image}
             alt="..."
             width={600}
             height={400}
@@ -114,7 +114,7 @@ const Projects = () => {
             modules={[Pagination]}
             className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
           >
-            {Projects.project_content.map((item, i) => (
+            {projects.project_content.map((item, i) => (
               <SwiperSlide
                 key={i}
                 className="bg-[#f9f9f9] rounded-3xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
