@@ -21,7 +21,7 @@ export const content = {
     firstName: "MANH",
     LastName: "CUONG",
     btnText: "Hire Me",
-    image: "/assets/images/Hero/kang.jpg",
+    image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
     hero_content: [
       { count: "FPT University", text: "Graduated" },
       { count: "6+", text: "Completed system-focused projects" },
@@ -67,7 +67,7 @@ export const content = {
   projects: {
     title: "Projects",
     subtitle: "MY CREATIONS",
-    image: "/assets/images/projects/person.png",
+    image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
     project_content: [
       {
         title: "Client Funky Website",
@@ -141,8 +141,8 @@ Unified dashboard for managers & staff:
   hireme: {
     title: "Hire Me",
     subtitle: "FOR YOUR PROJECTS",
-    image1: "/assets/images/Hireme/person.png",
-    image2: "/assets/images/Hireme/person.png",
+    image1: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+    image2: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
     para: "Looking for a developer who can build complete systems from scratch? I'm ready to bring your ideas to life",
     btnText: "Hire Me",
   },
