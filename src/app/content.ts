@@ -71,7 +71,7 @@ export const content = {
     project_content: [
       {
         title: "Client Funky Website",
-        image: "/assets/images/projects/img3.png",
+        image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
         githublink: "https://github.com/mkang10/funkytown-web-client",
         demo: "https://funkytown-web-client.vercel.app/",
         description: `
@@ -89,7 +89,7 @@ Customer-facing e-commerce site with features:
       },
       {
         title: "Manager Funky Website",
-        image: "/assets/images/projects/img4.png",
+        image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
         githublink: "https://github.com/mkang10/funkytown-web-manager",
         demo: "https://funkytown-web-manager.vercel.app/",
         description: `
@@ -103,7 +103,7 @@ Full system administration portal for owners:
       },
       {
         title: "Owner Funky Website",
-        image: "/assets/images/projects/img2.png",
+        image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
         githublink: "https://github.com/mkang10/funkytown-web-owner",
         demo: "https://funkytown-web-owner.vercel.app/",
         description: `
