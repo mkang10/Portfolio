@@ -37,14 +37,21 @@ const Hireme = () => {
           <div
             data-aos="fade-left"
             className="border-2 border-dark_primary max-w-sm
-           p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
+         p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
           >
             <p className="leading-7">{hireme.para}</p>
             <br />
-            <button className="btn bg-dark_primary text-white">
-              {hireme.btnText}
-            </button>
+            <a
+              href="https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn bg-dark_primary text-white hover-effect">
+                {hireme.btnText}
+              </button>
+            </a>
           </div>
+
         </div>
       </div>
     </section>

@@ -61,6 +61,9 @@
   .btn {
     @apply py-2 px-9 border-2 rounded-md border-dark_primary rounded-br-3xl font-medium;
   }
+  .hover-effect:hover {
+    @apply bg-dark_primary text-white scale-105;
+  }
 
   .title {
     @apply md:text-3xl text-2xl;
