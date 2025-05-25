@@ -197,7 +197,7 @@ Unified dashboard for managers & staff:
       image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
       hero_content: [
         { count: "Đại học FPT", text: "Đã Tốt Nghiệp" },
-        { count: "6+", text: "Dự án hệ đã hoàn thành" },
+        { count: "6+", text: "Dự án đã hoàn thành" },
       ],
     },
 
