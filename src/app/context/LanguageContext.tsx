@@ -6,13 +6,13 @@ export type Language = "en" | "vi";
 interface LanguageContextProps {
   lang: Language;
   setLang: (lang: Language) => void;
-  toggleLang: () => void; // 👈 Thêm toggle
+  toggleLang: () => void;
 }
 
 export const LanguageContext = createContext<LanguageContextProps>({
   lang: "en",
   setLang: () => {},
-  toggleLang: () => {}, // 👈 Placeholder
+  toggleLang: () => {},
 });
 
 interface LanguageProviderProps {
@@ -20,6 +20,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+  // Mặc định luôn là English
   const [lang, setLangState] = useState<Language>("en");
 
   useEffect(() => {
@@ -35,8 +36,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   };
 
   const toggleLang = () => {
-    const newLang = lang === "en" ? "vi" : "en";
-    setLang(newLang);
+    setLang(lang === "en" ? "vi" : "en");
   };
 
   return (
