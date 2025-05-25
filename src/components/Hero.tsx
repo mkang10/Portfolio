@@ -30,34 +30,34 @@ const Hero: React.FC = () => {
       <div className="absolute top-4 right-4 flex space-x-2 bg-white/80 dark:bg-[#0f172a] p-1 rounded-lg shadow">
         <button
           onClick={() => handleLanguage("en")}
-          className={`px-3 py-1 rounded transition-shadow ${
-            lang === "en"
+          className={`px-3 py-1 rounded transition-shadow ${lang === "en"
               ? "bg-black text-white font-bold shadow-md"
               : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-          }`}
+            }`}
         >
-          EN
+          🇬🇧 EN
         </button>
+
         <button
           onClick={() => handleLanguage("vi")}
-          className={`px-3 py-1 rounded transition-shadow ${
-            lang === "vi"
+          className={`px-3 py-1 rounded transition-shadow ${lang === "vi"
               ? "bg-black text-white font-bold shadow-md"
               : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-          }`}
+            }`}
         >
-          VI
+          🇻🇳 VI
         </button>
-         <button
+
+        <button
           onClick={() => handleLanguage("ja")}
-          className={`px-3 py-1 rounded transition-shadow ${
-            lang === "vi"
+          className={`px-3 py-1 rounded transition-shadow ${lang === "ja"
               ? "bg-black text-white font-bold shadow-md"
               : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-          }`}
+            }`}
         >
-          JA
+          🇯🇵 JA
         </button>
+
         <ToggleThemeButton />
       </div>
 
@@ -90,9 +90,8 @@ const Hero: React.FC = () => {
                 key={i}
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
-                className={`flex items-center w-80 gap-5 ${
-                  i === 1 ? "flex-row-reverse text-right" : ""
-                }`}
+                className={`flex items-center w-80 gap-5 ${i === 1 ? "flex-row-reverse text-right" : ""
+                  }`}
               >
                 <h3>{item.count}</h3>
                 <p>{item.text}</p>

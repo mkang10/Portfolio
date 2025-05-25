@@ -322,7 +322,7 @@ Bảng điều khiển chung cho quản lý & nhân viên:
             image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
 
       cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
-      title: "Thuê Tôi",
+      title: "Là Chìa Khoá",
       subtitle: "CHO DỰ ÁN CỦA BẠN",
       para: "Bạn đang tìm một lập trình viên có thể xây dựng hệ thống từ A đến Z? Tôi sẵn sàng biến ý tưởng của bạn thành hiện thực.",
       btnText: "CV Của Tôi",
