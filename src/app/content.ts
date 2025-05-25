@@ -8,7 +8,7 @@ import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import { Content } from "../type/content";
 
-export const content: Record<'en' | 'vi', Content> = {
+export const content: Record<'en' | 'vi' | 'ja', Content> = {
   en: {
     nav: [
       { link: "#home", icon: TbSmartHome },
@@ -349,4 +349,162 @@ Bảng điều khiển chung cho quản lý & nhân viên:
       text: "© Bản quyền 2025 thuộc về Mạnh Cường",
     },
   },
-};
+  
+  ja: {
+    nav: [
+      { link: "#home", icon: TbSmartHome },
+      { link: "#skills", icon: BiUser },
+      { link: "#services", icon: RiServiceLine },
+      { link: "#projects", icon: RiProjectorLine },
+      { link: "#contact", icon: MdOutlinePermContactCalendar },
+    ],
+
+    hero: {
+      title: "ウェブ開発者",
+      firstName: "マソン",
+      LastName: "カン",
+      btnText: "履歴書",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      hero_content: [
+        { count: "FPT大学", text: "卒業" },
+        { count: "6+", text: "システム開発プロジェクト完了" },
+      ],
+    },
+
+    skills: {
+      title: "スキル",
+      subtitle: "私のトップスキル",
+      skills_content: [
+        { name: "C#", para: "ダミーテキスト", logo: "/assets/images/Skills/net.png" },
+        { name: "Node js", para: "ダミーテキスト", logo: "/assets/images/Skills/node.png" },
+        { name: "React js", para: "ダミーテキスト", logo: "/assets/images/Skills/react.png" },
+        { name: "Next js", para: "ダミーテキスト", logo: "/assets/images/Skills/next.jpg" },
+        { name: "My Sql", para: "ダミーテキスト", logo: "/assets/images/Skills/sql.png" },
+        { name: "MS sql server", para: "ダミーテキスト", logo: "/assets/images/Skills/ssms.png" },
+      ],
+      icon: MdArrowForward,
+    },
+
+    services: {
+      title: "サービス",
+      subtitle: "提供内容",
+      service_content: [
+        {
+          title: "フルスタックWeb開発",
+          para: "フロントエンド設計からバックエンドAPIまで、ビジネス向けの完全なソリューションを提供します。",
+          logo: "/assets/images/Services/logo1.png",
+        },
+        {
+          title: "データベース設計とモデリング",
+          para: "スキーマ設計、インデックス、ストアドプロシージャ",
+          logo: "/assets/images/Services/logo2.png",
+        },
+        {
+          title: "DevOps統合",
+          para: "CI/CDパイプラインの構築、パフォーマンス調整、テスト、システムセキュリティ",
+          logo: "/assets/images/Services/logo3.png",
+        },
+      ],
+    },
+
+    projects: {
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      title: "プロジェクト",
+      subtitle: "私の作品",
+      project_content: [
+        {
+          title: "Client Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
+          githublink: "https://github.com/mkang10/funkytown-web-client",
+          demo: "https://funkytown-web-client.vercel.app/",
+          description: `
+顧客向けECサイト機能一覧：
+- プロフィール編集、住所追加/編集
+- 商品おすすめ
+- 検索、閲覧、フィルタリング
+- お気に入り追加/削除
+- カートに追加・編集
+- チェックアウト・注文
+- フィードバック送信
+- 返品/交換リクエスト
+- AIチャットボットとチャット
+          `,
+        },
+        {
+          title: "Manager Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
+          githublink: "https://github.com/mkang10/funkytown-web-manager",
+          demo: "https://funkytown-web-manager.vercel.app/",
+          description: `
+システム管理ポータル機能一覧：
+- 商品の表示、作成、更新
+- 中央倉庫への在庫インポート
+- カテゴリ管理（追加/編集）
+- 在庫数と収益の追跡
+- 入出庫・転送リクエストの監視
+          `,
+        },
+        {
+          title: "Owner Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          githublink: "https://github.com/mkang10/funkytown-web-owner",
+          demo: "https://funkytown-web-owner.vercel.app/",
+          description: `
+管理者・スタッフ共用ダッシュボード機能：
+- 入庫リクエスト作成
+- 収益レポート管理
+- 顧客・入出庫注文の追跡
+- 返品/交換レシート処理
+- (管理者のみ) 顧客注文処理、出庫・入庫
+- (スタッフのみ) 注文・出庫・入庫業務実行
+          `,
+        },
+      ],
+    },
+
+    testimonials: {
+      title: "お客様の声",
+      subtitle: "クライアントレビュー",
+      testimonials_content: [
+        {
+          review: "「プロフェッショナルで献身的、非常に効率的です。彼の働きぶりに深く感謝しており、今後のプロジェクトでもぜひ一緒に仕事をしたいです。」",
+          img: "/assets/images/Testimonials/logo.png",
+          name: "Funky Town",
+        },
+        // 追加のレビューも同様に...
+      ],
+    },
+
+    hireme: {
+      title: "採用依頼",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      subtitle: "あなたのプロジェクトのために",
+      para: "システムをゼロから構築できる開発者をお探しですか？アイデアを形にする準備はできています。",
+      btnText: "履歴書",
+    },
+
+    contact: {
+      title: "お問い合わせ",
+      subtitle: "ご連絡はこちら",
+      social_media: [
+        { text: "ngmcuong123456789@gmail.com", icon: GrMail, link: "mailto:ngmcuong123456789@gmail.com" },
+        { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
+      ],
+      successMessage: "メールが正常に送信されました！",
+      errorMessage: "エラー：",
+      form: {
+        namePlaceholder: "お名前",
+        emailPlaceholder: "メールアドレス",
+        messagePlaceholder: "メッセージ内容",
+        btnText: "送信",
+      },
+    },
+
+    footer: {
+      text: "© 2025 Mạnh Cường. 無断転載を禁じます。",
+    },
+  },
+ 
+}

@@ -48,6 +48,16 @@ const Hero: React.FC = () => {
         >
           VI
         </button>
+         <button
+          onClick={() => handleLanguage("ja")}
+          className={`px-3 py-1 rounded transition-shadow ${
+            lang === "vi"
+              ? "bg-black text-white font-bold shadow-md"
+              : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          }`}
+        >
+          JA
+        </button>
         <ToggleThemeButton />
       </div>
 

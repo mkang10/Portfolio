@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap&subset=latin-ext,vietnamese");
 @import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap&subset=latin-ext,vietnamese");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap&subset=latin-ext,vietnamese");
 
 @tailwind base;
 @tailwind components;
@@ -89,6 +91,23 @@
     background-color: transparent;
     color: #E1E8F0;
   }
+
+  /* --- Language-based font preferences --- */
+  .lang-vi body {
+    /* Chuyển sang Noto Sans cho đọc tiếng Việt tối ưu */
+    font-family: "Noto Sans", "Poppins", "Inria Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .lang-en body {
+    font-family: "Poppins", "Paprika", "Inria Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .lang-vi h1, .lang-vi h2, .lang-vi h3, .lang-vi h4, .lang-vi h5, .lang-vi h6 {
+    /* Sử dụng Noto Serif cho tiêu đề tiếng Việt sắc nét và hỗ trợ dấu */
+    font-family: "Noto Serif", serif;
+  }
+  .lang-en h1, .lang-en h2, .lang-en h3, .lang-en h4, .lang-en h5, .lang-en h6 {
+    font-family: "Paprika", cursive;
+  }
 }
 
 @layer utilities {
@@ -145,6 +164,7 @@
     opacity: 0.5;
   }
 }
+
 /* Light mode (default) */
 .swiper-pagination-bullet {
   background-color: #3b82f6; /* Tailwind blue-500 */
@@ -203,5 +223,4 @@ select:-webkit-autofill {
   --color-card-bg: #1E2733;
   --color-card-border: #303C4D;
   --color-hover-overlay: rgba(255,255,255,0.1);
-
 }
