@@ -96,20 +96,7 @@ Customer-facing e-commerce site with features:
           image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-          description: `
-Full system administration portal for owners:
-- View, create & update products
-- Import stock to central warehouse
-- Manage categories (add/edit)
-- Track product quantities & revenue
-- Monitor import, dispatch & transfer requests
-          `,
-        },
-        {
-          title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
-          githublink: "https://github.com/mkang10/funkytown-web-owner",
-          demo: "https://funkytown-web-owner.vercel.app/",
+          
           description: `
 Unified dashboard for managers & staff:
 - Create import requests
@@ -118,6 +105,20 @@ Unified dashboard for managers & staff:
 - Handle return/exchange receipts
 - (Manager only) Process orders for customers, dispatch & imports
 - (Staff only) Execute order, dispatch & import tasks
+          `,
+        },
+        {
+          title: "Owner Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          githublink: "https://github.com/mkang10/funkytown-web-owner",
+          demo: "https://funkytown-web-owner.vercel.app/",
+          description: `
+Full system administration portal for owners:
+- View, create & update products
+- Import stock to central warehouse
+- Manage categories (add/edit)
+- Track product quantities & revenue
+- Monitor import, dispatch & transfer requests
           `,
         },
       ],
@@ -266,20 +267,7 @@ Website thương mại điện tử cho khách hàng:
           image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-          description: `
-Cổng quản trị hệ thống cho chủ cửa hàng:
-- Xem, tạo & cập nhật sản phẩm
-- Nhập kho về kho trung tâm
-- Quản lý danh mục (thêm/sửa)
-- Theo dõi số lượng sản phẩm & doanh thu
-- Giám sát yêu cầu nhập, xuất & chuyển kho
-          `,
-        },
-        {
-          title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
-          githublink: "https://github.com/mkang10/funkytown-web-owner",
-          demo: "https://funkytown-web-owner.vercel.app/",
+         
           description: `
 Bảng điều khiển chung cho quản lý & nhân viên:
 - Tạo yêu cầu nhập hàng
@@ -288,6 +276,20 @@ Bảng điều khiển chung cho quản lý & nhân viên:
 - Xử lý phiếu trả/đổi hàng
 - (Chỉ Quản lý) Xử lý đơn cho khách, xuất & nhập hàng
 - (Chỉ Nhân viên) Thực thi đơn hàng, xuất & nhập
+          `,
+        },
+        {
+          title: "Owner Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          githublink: "https://github.com/mkang10/funkytown-web-owner",
+          demo: "https://funkytown-web-owner.vercel.app/",
+           description: `
+Cổng quản trị hệ thống cho chủ cửa hàng:
+- Xem, tạo & cập nhật sản phẩm
+- Nhập kho về kho trung tâm
+- Quản lý danh mục (thêm/sửa)
+- Theo dõi số lượng sản phẩm & doanh thu
+- Giám sát yêu cầu nhập, xuất & chuyển kho
           `,
         },
       ],
@@ -436,20 +438,7 @@ Bảng điều khiển chung cho quản lý & nhân viên:
           image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-          description: `
-システム管理ポータル機能一覧：
-- 商品の表示、作成、更新
-- 中央倉庫への在庫インポート
-- カテゴリ管理（追加/編集）
-- 在庫数と収益の追跡
-- 入出庫・転送リクエストの監視
-          `,
-        },
-        {
-          title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
-          githublink: "https://github.com/mkang10/funkytown-web-owner",
-          demo: "https://funkytown-web-owner.vercel.app/",
+          
           description: `
 管理者・スタッフ共用ダッシュボード機能：
 - 入庫リクエスト作成
@@ -458,6 +447,20 @@ Bảng điều khiển chung cho quản lý & nhân viên:
 - 返品/交換レシート処理
 - (管理者のみ) 顧客注文処理、出庫・入庫
 - (スタッフのみ) 注文・出庫・入庫業務実行
+          `
+        },
+        {
+          title: "Owner Funky Website",
+          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          githublink: "https://github.com/mkang10/funkytown-web-owner",
+          demo: "https://funkytown-web-owner.vercel.app/",
+          description: `
+システム管理ポータル機能一覧：
+- 商品の表示、作成、更新
+- 中央倉庫への在庫インポート
+- カテゴリ管理（追加/編集）
+- 在庫数と収益の追跡
+- 入出庫・転送リクエストの監視
           `,
         },
       ],
