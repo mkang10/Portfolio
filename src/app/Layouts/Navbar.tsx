@@ -1,11 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { createElement } from "react";
 import { content } from "@/src/app/content";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Navbar = () => {
-  const { nav } = content;
+    const { lang } = useContext(LanguageContext);
+    const { nav } = content[lang];
+  
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 

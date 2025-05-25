@@ -2,13 +2,27 @@
 
 // import content
 import { content } from "@/src/app/content";
-import { createElement, useState } from "react";
+import { createElement, useContext, useState, ComponentType } from "react";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
 // import modal package
 import Modal from "react-modal";
-import { Skill } from "@/src/type/content";
+import { LanguageContext } from "../app/context/LanguageContext";
+
+// Type definitions
+export interface SkillItem {
+  name: string;
+  para: string;
+  logo: string | StaticImageData;
+}
+
+export interface SkillsData {
+  title: string;
+  subtitle: string;
+  skills_content: SkillItem[];
+  icon: ComponentType;
+}
 
 const customStyles = {
   content: {
@@ -28,12 +42,13 @@ const customStyles = {
 Modal.setAppElement("body");
 
 const Skills = () => {
-  const { skills } = content;
+  const { lang } = useContext(LanguageContext);
+  const { skills } = content[lang];
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [selectSkill, setSelectSkill] = useState<Skill | null>(null);
+  const [selectSkill, setSelectSkill] = useState<SkillItem | null>(null);
 
-
-  function openModal() {
+  function openModal(skill: SkillItem) {
+    setSelectSkill(skill);
     setIsOpen(true);
   }
 
@@ -96,7 +111,7 @@ const Skills = () => {
         </h4>
         <br />
         <div className="flex flex-wrap gap-4 justify-center">
-          {skills.skills_content.map((skill, i) => (
+          {skills.skills_content.map((skill : SkillItem, i : number) => (
             <div
               key={i}
               data-aos="fade-up"
@@ -115,15 +130,15 @@ const Skills = () => {
               <div>
                 <h6>{skill.name}</h6>
                 {/* <p className="italic">{skill.para}</p> */}
-                {/* <div
+                <div
                   onClick={() => {
                     setSelectSkill(skill);
-                    openModal();
+                    openModal(skill);
                   }}
                   className="text-xl absolute top-3 right-3"
                 >
                   {createElement(skills.icon)}
-                </div> */}
+                </div>
               </div>
             </div>
           ))}

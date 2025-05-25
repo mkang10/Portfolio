@@ -1,15 +1,16 @@
 "use client";
 
-import { content } from "@/src/app/content";
-import { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Image from "next/image";
-
-// Import AOS và CSS của nó
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { content } from "@/src/app/content";
+import { LanguageContext, Language } from "@/src/app/context/LanguageContext";
 
-const Hero = () => {
-  const { hero } = content;
+const Hero: React.FC = () => {
+  // Lấy ngôn ngữ hiện tại và hàm thay đổi
+  const { lang, setLang } = useContext(LanguageContext);
+  const { hero } = content[lang];
 
   useEffect(() => {
     AOS.init({
@@ -18,15 +19,36 @@ const Hero = () => {
     });
   }, []);
 
+  const handleLanguage = (language: Language) => {
+    if (lang !== language) {
+      setLang(language);
+    }
+  };
+
   return (
-    <section id="home" className="overflow-hidden">
-      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+    <section id="home" className="overflow-hidden relative">
+      {/* Nút chuyển ngôn ngữ */}
+      <div className="absolute top-4 right-4 flex space-x-2 bg-white/80 p-1 rounded-lg shadow">
+        <button
+          onClick={() => handleLanguage("en")}
+          className={`px-3 py-1 rounded text-dark_primary transition-shadow ${lang === "en" ? "bg-black text-white font-bold shadow-md" : "bg-transparent text-gray-600 hover:bg-gray-200"}`}
+        >
+          EN
+        </button>
+        <button
+          onClick={() => handleLanguage("vi")}
+          className={`px-3 py-1 rounded text-dark_primary transition-shadow ${lang === "vi" ? "bg-black text-white font-bold shadow-md" : "bg-transparent text-gray-600 hover:bg-gray-200"}`}
+        >
+          VI
+        </button>
+      </div>
+
+      <div className="min-h-screen flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <div
           data-aos="slide-left"
-          data-aos-delay="1200"
+          data-aos-delay={1200}
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          
           <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
             <span className="text-dark_primary">{hero.LastName}</span>
@@ -37,43 +59,42 @@ const Hero = () => {
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
           <h2>{hero.title}</h2>
           <br />
-         <div className="flex justify-end">
-  <a 
-    href="https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    <button className="btn hover-effect">{hero.btnText}</button>
-  </a>
-</div>
+          <div className="flex justify-end">
+            <a
+              href={hero.cvLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn hover-effect">{hero.btnText}</button>
+            </a>
+          </div>
 
           <div className="flex flex-col gap-10 mt-10">
-            {hero.hero_content.map((content, i) => (
+            {hero.hero_content.map((item: { count: string; text: string }, i: number) => (
               <div
                 key={i}
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
-                className={`flex items-center w-80 gap-5
-                  ${i === 1 ? "flex-row-reverse text-right" : ""}`}
+                className={`flex items-center w-80 gap-5 ${
+                  i === 1 ? "flex-row-reverse text-right" : ""
+                }`}
               >
-                <h3>{content.count}</h3>
-                <p>{content.text}</p>
+                <h3>{item.count}</h3>
+                <p>{item.text}</p>
               </div>
             ))}
-            
           </div>
         </div>
 
-     <div className="mt-10 flex justify-center" data-aos="slide-up">
-  <Image
-    src={hero.image}
-    alt="..."
-    width={400} // Hoặc giá trị phù hợp
-    height={300}
-    className="object-cover"
-  />
-</div>
-
+        <div className="mt-10 flex justify-center" data-aos="slide-up">
+          <Image
+            src={hero.image}
+            alt="Hero"
+            width={400}
+            height={300}
+            className="object-cover"
+          />
+        </div>
       </div>
     </section>
   );

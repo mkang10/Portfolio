@@ -1,12 +1,14 @@
 "use client";
 
-import { createElement, useRef } from "react";
+import { createElement, useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { content } from "@/src/app/content";
+import { LanguageContext } from "../app/context/LanguageContext";
 
 const Contact = () => {
-  const { contact } = content;
+    const { lang } = useContext(LanguageContext);
+  const { contact } = content[lang];
   const form = useRef<HTMLFormElement>(null); // ✅ sửa ở đây
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {

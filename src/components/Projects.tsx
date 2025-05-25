@@ -1,56 +1,59 @@
 "use client";
 
-// Swiper
+import React, { useState, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-
-// Content & Image
-import { content } from "@/src/app/content";
-import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
-
-// Modal
+import Image from "next/image";
 import Modal from "react-modal";
+
+import { content } from "@/src/app/content";
+import { LanguageContext } from "@/src/app/context/LanguageContext";
+import { ProjectItem } from "../type/content";
+
 Modal.setAppElement("body");
+
 const customStyles = {
   content: {
-    top: "50%", left: "50%", right: "auto", bottom: "auto",
-    marginRight: "-50%", transform: "translate(-50%, -50%)",
-    maxWidth: "24rem", width: "90%", padding: "1.5rem",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    maxWidth: "24rem",
+    width: "90%",
+    padding: "1.5rem",
     zIndex: 10001,
-
   },
-  overlay: { backgroundColor: "rgba(0,0,0,0.5)" },
+  overlay: {
+    backgroundColor: "rgba(0,0,0,0.5)",
     zIndex: 10000,
-
+  },
 };
 
-const Projects = () => {
-  const { projects } = content;
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<{
-    title: string;
-    image: string;
-    description: string;
-  } | null>(null);
+const Projects: React.FC = () => {
+  const { lang } = useContext(LanguageContext);
+  const { projects } = content[lang];
 
-  const openModal = (proj: typeof projects.project_content[0]) => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+
+  const openModal = (proj: ProjectItem) => {
     setSelectedProject(proj);
     setIsOpen(true);
   };
-  const closeModal = () => setIsOpen(false);
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section className="bg-bg_light_primary" id="projects">
       {/* Modal */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        
-      >
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
         {selectedProject && (
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -100,7 +103,7 @@ const Projects = () => {
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
           <Image
             src={projects.image}
-            alt="..."
+            alt="Project showcase"
             width={600}
             height={400}
             data-aos="fade-right"
@@ -114,7 +117,7 @@ const Projects = () => {
             modules={[Pagination]}
             className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
           >
-            {projects.project_content.map((item, i) => (
+            {projects.project_content.map((item: ProjectItem, i: number) => (
               <SwiperSlide
                 key={i}
                 className="bg-[#f9f9f9] rounded-3xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
@@ -128,13 +131,11 @@ const Projects = () => {
                 />
 
                 <div className="flex flex-col gap-3">
-                  <h5
-                    className="text-xl font-semibold font-Poppins text-gray-900"
-                  >
+                  <h5 className="text-xl font-semibold font-Poppins text-gray-900">
                     {item.title}
                   </h5>
 
-                  {/* Short preview (first line) */}
+                  {/* Preview first line */}
                   <p className="text-sm text-gray-700 leading-snug line-clamp-3">
                     {item.description.trim().split("\n")[0]}
                   </p>

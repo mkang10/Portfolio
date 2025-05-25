@@ -1,8 +1,13 @@
+"use client";
 import { content } from "@/src/app/content";
 import Image from "next/image";
+import { useContext } from "react";
+import { LanguageContext } from "../app/context/LanguageContext";
 
 const Services = () => {
-  const { services } = content;
+  const { lang } = useContext(LanguageContext);
+
+  const { services } = content[lang];
   return (
     <section id="services">
       <div className="md:container px-5 py-14">
