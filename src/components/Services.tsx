@@ -6,10 +6,10 @@ import { LanguageContext } from "../app/context/LanguageContext";
 
 const Services = () => {
   const { lang } = useContext(LanguageContext);
-
   const { services } = content[lang];
+
   return (
-    <section id="services">
+    <section id="services" className="transition-colors duration-300 dark:bg-[#0f172a] dark:text-white">
       <div className="md:container px-5 py-14">
         <h2 className="title" data-aos="fade-down">
           {services.title}
@@ -24,10 +24,10 @@ const Services = () => {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 600}
-              className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-sm 
-              hover:!blur-none"
+              className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 dark:border-slate-600 rounded-xl text-center 
+              bg-bg_light_primary dark:bg-slate-800 p-6 flex-1 group-hover:blur-sm hover:!blur-none"
             >
-<Image src={content.logo} alt="..." width={40} height={40} className="mx-auto" />
+              <Image src={content.logo} alt="..." width={40} height={40} className="mx-auto" />
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>

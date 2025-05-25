@@ -20,8 +20,8 @@ export const content: Record<'en' | 'vi', Content> = {
 
     hero: {
       title: "Web Developer",
-      firstName: "M",
-      LastName: "Kang",
+      firstName: "MASON",
+      LastName: "KANG",
       btnText: "My CV",
       image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
       cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
@@ -133,6 +133,18 @@ Unified dashboard for managers & staff:
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
+         {
+          review:
+            "“Professional, Dedicated, and Highly Efficient. We deeply appreciate Cuong's work ethic and look forward to working with him on future projects.”",
+          img: "/assets/images/Testimonials/logo.png",
+          name: "Funky Town",
+        },
+        {
+          review:
+            "“Professional, Dedicated, and Highly Efficient. We deeply appreciate Cuong's work ethic and look forward to working with him on future projects.”",
+          img: "/assets/images/Testimonials/logo.png",
+          name: "Funky Town",
+        }
       ],
     },
 
@@ -291,6 +303,18 @@ Bảng điều khiển chung cho quản lý & nhân viên:
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
+         {
+          review:
+            "“Chuyên nghiệp, tận tâm và hiệu quả, chúng tôi đánh giá rất cao tinh thần làm việc của Cường và chắc chắn sẽ tiếp tục hợp tác trong các dự án sắp tới.”",
+          img: "/assets/images/Testimonials/logo.png",
+          name: "Funky Town",
+        },
+         {
+          review:
+            "“Chuyên nghiệp, tận tâm và hiệu quả, chúng tôi đánh giá rất cao tinh thần làm việc của Cường và chắc chắn sẽ tiếp tục hợp tác trong các dự án sắp tới.”",
+          img: "/assets/images/Testimonials/logo.png",
+          name: "Funky Town",
+        }
       ],
     },
 

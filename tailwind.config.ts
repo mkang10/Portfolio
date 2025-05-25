@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'class', // thêm lớp dark mode
   content: [
     "./index.html",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,6 +22,14 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // Light mode colors
+        'section': 'var(--color-bg-section)',
+        'primary': 'var(--color-text-primary)',
+        'card': 'var(--color-card-bg)',
+        'card-border': 'var(--color-card-border)',
+        'hover-overlay': 'var(--color-hover-overlay)',
+
+        // Existing custom colors
         dark_primary: "#06223F",
         bg_light_primary: "#F5F9FD",
         gray: "#B7C5D3",

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LanguageProvider>
-          {children}
+                  <ThemeProvider>{children}</ThemeProvider>
         </LanguageProvider>
       </body>
     </html>

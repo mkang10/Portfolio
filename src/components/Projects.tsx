@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,24 +14,8 @@ import { ProjectItem } from "../type/content";
 
 Modal.setAppElement("body");
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    maxWidth: "24rem",
-    width: "90%",
-    padding: "1.5rem",
-    zIndex: 10001,
-  },
-  overlay: {
-    backgroundColor: "rgba(0,0,0,0.5)",
-    zIndex: 10000,
-  },
-};
+
+// customStyles cập nhật dựa vào isDarkMode state
 
 const Projects: React.FC = () => {
   const { lang } = useContext(LanguageContext);
@@ -49,13 +33,55 @@ const Projects: React.FC = () => {
     setIsOpen(false);
     setSelectedProject(null);
   };
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsDarkMode(document.documentElement.classList.contains("dark"));
+    };
+
+    checkTheme();
+
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+    return () => observer.disconnect();
+  }, []);
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      maxWidth: "24rem",
+      width: "90%",
+      padding: "1.5rem",
+      zIndex: 10001,
+      backgroundColor: isDarkMode ? "#1e293b" : "#ffffff", // slate-800 dark, white light
+      border: "1px solid #ccc",
+      borderRadius: "0.75rem",
+      boxShadow: isDarkMode
+        ? "0 0 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(255, 255, 255, 0.1)"
+        : "0 0 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(255, 255, 255, 0.1)",
+      transition: "box-shadow 0.4s ease, background-color 0.3s ease",
+      backdropFilter: "blur(8px)",
+    },
+    overlay: {
+      backgroundColor: isDarkMode ? "rgba(0,0,0,0.85)" : "rgba(0,0,0,0.5)",
+      zIndex: 10000,
+      backdropFilter: "blur(4px)",
+    },
+  };
+
 
   return (
-    <section className="bg-bg_light_primary" id="projects">
+    <section className="bg-bg_light_primary dark:bg-black dark:text-white transition-colors duration-300" id="projects">
       {/* Modal */}
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
         {selectedProject && (
-          <div>
+          <div className="bg-white dark:bg-slate-800 p-6 rounded shadow-md transition-colors duration-300">
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src={selectedProject.image}
@@ -64,11 +90,11 @@ const Projects: React.FC = () => {
                 height={40}
                 className="rounded-sm"
               />
-              <h4 className="text-lg font-semibold font-Poppins">
+              <h4 className="text-lg font-semibold font-Poppins text-gray-900 dark:text-white">
                 {selectedProject.title}
               </h4>
             </div>
-            <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+            <ul className="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300">
               {selectedProject.description
                 .trim()
                 .split("\n")
@@ -79,14 +105,21 @@ const Projects: React.FC = () => {
             <div className="mt-6 flex justify-end">
               <button
                 onClick={closeModal}
-                className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition"
+                className="px-4 py-2 bg-black text-white rounded-lg 
+             hover:bg-gray-800 dark:bg-gray-200 dark:text-white dark:hover:bg-gray-300 
+             shadow-md hover:shadow-lg 
+             transform hover:scale-105 active:scale-95 
+             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:focus:ring-gray-300 
+             transition-all duration-200"
               >
                 Close
               </button>
+
             </div>
           </div>
         )}
       </Modal>
+
 
       {/* Main Content */}
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
@@ -120,7 +153,7 @@ const Projects: React.FC = () => {
             {projects.project_content.map((item: ProjectItem, i: number) => (
               <SwiperSlide
                 key={i}
-                className="bg-[#f9f9f9] rounded-3xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+                className="bg-[#f9f9f9] dark:bg-slate-800 rounded-3xl p-6 shadow-md dark:shadow-none border border-gray-200 dark:border-slate-600 hover:shadow-lg transition-all duration-300"
               >
                 <Image
                   src={item.image}
@@ -131,12 +164,11 @@ const Projects: React.FC = () => {
                 />
 
                 <div className="flex flex-col gap-3">
-                  <h5 className="text-xl font-semibold font-Poppins text-gray-900">
+                  <h5 className="text-xl font-semibold font-Poppins text-gray-900 dark:text-white">
                     {item.title}
                   </h5>
 
-                  {/* Preview first line */}
-                  <p className="text-sm text-gray-700 leading-snug line-clamp-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-snug line-clamp-3">
                     {item.description.trim().split("\n")[0]}
                   </p>
 
@@ -156,14 +188,14 @@ const Projects: React.FC = () => {
                         href={item.githublink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-1.5 text-sm rounded-full border border-black text-black hover:bg-black hover:text-white transition-colors duration-200"
+                        className="px-4 py-1.5 text-sm rounded-full border border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white transition-colors duration-200"
                       >
                         💻 GitHub
                       </a>
                     )}
                     <button
                       onClick={() => openModal(item)}
-                      className="px-4 py-1.5 text-sm text-black underline-offset-2 hover:underline"
+                      className="px-4 py-1.5 text-sm text-black dark:text-white underline-offset-2 hover:underline"
                     >
                       View More
                     </button>

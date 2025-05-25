@@ -6,16 +6,16 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { content } from "@/src/app/content";
 import { LanguageContext, Language } from "@/src/app/context/LanguageContext";
+import ToggleThemeButton from "../app/context/ToggleThemeButton";
 
 const Hero: React.FC = () => {
-  // Lấy ngôn ngữ hiện tại và hàm thay đổi
   const { lang, setLang } = useContext(LanguageContext);
   const { hero } = content[lang];
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // thời gian chạy animation
-      once: true,     // chỉ chạy 1 lần khi scroll tới
+      duration: 1000,
+      once: true,
     });
   }, []);
 
@@ -27,31 +27,40 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="overflow-hidden relative">
-      {/* Nút chuyển ngôn ngữ */}
-      <div className="absolute top-4 right-4 flex space-x-2 bg-white/80 p-1 rounded-lg shadow">
+      <div className="absolute top-4 right-4 flex space-x-2 bg-white/80 dark:bg-[#0f172a] p-1 rounded-lg shadow">
         <button
           onClick={() => handleLanguage("en")}
-          className={`px-3 py-1 rounded text-dark_primary transition-shadow ${lang === "en" ? "bg-black text-white font-bold shadow-md" : "bg-transparent text-gray-600 hover:bg-gray-200"}`}
+          className={`px-3 py-1 rounded transition-shadow ${
+            lang === "en"
+              ? "bg-black text-white font-bold shadow-md"
+              : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          }`}
         >
           EN
         </button>
         <button
           onClick={() => handleLanguage("vi")}
-          className={`px-3 py-1 rounded text-dark_primary transition-shadow ${lang === "vi" ? "bg-black text-white font-bold shadow-md" : "bg-transparent text-gray-600 hover:bg-gray-200"}`}
+          className={`px-3 py-1 rounded transition-shadow ${
+            lang === "vi"
+              ? "bg-black text-white font-bold shadow-md"
+              : "bg-transparent text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          }`}
         >
           VI
         </button>
+        <ToggleThemeButton />
       </div>
 
       <div className="min-h-screen flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <div
           data-aos="slide-left"
           data-aos-delay={1200}
-          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bottom-0 -z-10
+                     bg-primaryLinear dark:bg-primaryLinear-dark"
         >
-          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+          <h1 className="rotate-90 absolute top-[30%] right-[5%] text-[#EAF2FA] dark:text-white select-none pointer-events-none">
             {hero.firstName}{" "}
-            <span className="text-dark_primary">{hero.LastName}</span>
+            <span className="text-dark_primary dark:text-dark_primary">{hero.LastName}</span>
           </h1>
         </div>
 
@@ -60,11 +69,7 @@ const Hero: React.FC = () => {
           <h2>{hero.title}</h2>
           <br />
           <div className="flex justify-end">
-            <a
-              href={hero.cvLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={hero.cvLink} target="_blank" rel="noopener noreferrer">
               <button className="btn hover-effect">{hero.btnText}</button>
             </a>
           </div>
