@@ -23,7 +23,7 @@ export const content: Record<'en' | 'vi' | 'ja', Content> = {
       firstName: "MASON",
       LastName: "KANG",
       btnText: "My CV",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       hero_content: [
         { count: "FPT University", text: "Graduated" },
@@ -68,7 +68,7 @@ export const content: Record<'en' | 'vi' | 'ja', Content> = {
     },
 
     projects: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
       title: "Projects",
       subtitle: "MY CREATIONS",
@@ -151,7 +151,7 @@ Full system administration portal for owners:
 
     hireme: {
       title: "Hire Me",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       subtitle: "FOR YOUR PROJECTS",
       para: "Looking for a developer who can build complete systems from scratch? I'm ready to bring your ideas to life.",
@@ -195,7 +195,7 @@ Full system administration portal for owners:
       LastName: "CUONG",
       btnText: "CV của tôi",
       cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       hero_content: [
         { count: "Đại học FPT", text: "Đã Tốt Nghiệp" },
         { count: "6+", text: "Dự án đã hoàn thành" },
@@ -239,7 +239,7 @@ Full system administration portal for owners:
     },
 
     projects: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
       title: "Dự Án",
       subtitle: "SẢN PHẨM CỦA TÔI",
@@ -321,7 +321,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
     },
 
     hireme: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
       cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       title: "Là Chìa Khoá",
@@ -366,7 +366,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       firstName: "マソン",
       LastName: "カン",
       btnText: "履歴書",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       hero_content: [
         { count: "FPT大学", text: "卒業" },
@@ -411,7 +411,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
     },
 
     projects: {
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       title: "プロジェクト",
       subtitle: "私の作品",
       project_content: [
@@ -481,7 +481,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
 
     hireme: {
       title: "採用依頼",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748005614/person_r9hvdh.png",
+      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       subtitle: "あなたのプロジェクトのために",
       para: "システムをゼロから構築できる開発者をお探しですか？アイデアを形にする準備はできています。",
