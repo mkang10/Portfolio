@@ -162,7 +162,7 @@ Full system administration portal for owners:
       title: "Contact Me",
       subtitle: "GET IN TOUCH",
       social_media: [
-        { text: "ngmcuong123456789@gmail.com", icon: GrMail, link: "mailto:ngmcuong123456789@gmail.com" },
+        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
       ],
       successMessage: "Email sent successfully!",
@@ -334,7 +334,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       title: "Liên Hệ",
       subtitle: "KẾT NỐI VỚI TÔI",
       social_media: [
-        { text: "ngmcuong123456789@gmail.com", icon: GrMail, link: "mailto:ngmcuong123456789@gmail.com" },
+        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
       ],
      successMessage: "Gửi email thành công!",
@@ -492,7 +492,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       title: "お問い合わせ",
       subtitle: "ご連絡はこちら",
       social_media: [
-        { text: "ngmcuong123456789@gmail.com", icon: GrMail, link: "mailto:ngmcuong123456789@gmail.com" },
+        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
       ],
       successMessage: "メールが正常に送信されました！",
