@@ -1,14 +1,13 @@
 // import icons from react-icons
-import { GrMail } from "react-icons/gr";
+import { GrMail, GrTiktok } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
+import { BiLogoInstagram, BiLogoTiktok, BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 import { Content } from "../type/content";
 
-export const content: Record<'en' | 'vi' | 'ja', Content> = {
+export const content: Record<"en" | "vi" | "ja", Content> = {
   en: {
     nav: [
       { link: "#home", icon: TbSmartHome },
@@ -23,8 +22,10 @@ export const content: Record<'en' | 'vi' | 'ja', Content> = {
       firstName: "MASON",
       LastName: "KANG",
       btnText: "My CV",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
-      cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       hero_content: [
         { count: "FPT University", text: "Graduated" },
         { count: "6+", text: "Completed system-focused projects" },
@@ -35,12 +36,36 @@ export const content: Record<'en' | 'vi' | 'ja', Content> = {
       title: "Skills",
       subtitle: "MY TOP SKILLS",
       skills_content: [
-        { name: "C#", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/net.png" },
-        { name: "Node js", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/node.png" },
-        { name: "React js", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/react.png" },
-        { name: "Next js", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/next.jpg" },
-        { name: "My Sql", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/sql.png" },
-        { name: "MS sql server", para: "Lorem ipsum text dummy", logo: "/assets/images/Skills/ssms.png" },
+        {
+          name: "C#",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/net.png",
+        },
+        {
+          name: "Node js",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/node.png",
+        },
+        {
+          name: "React js",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/react.png",
+        },
+        {
+          name: "Next js",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/next.jpg",
+        },
+        {
+          name: "My Sql",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/sql.png",
+        },
+        {
+          name: "MS sql server",
+          para: "Lorem ipsum text dummy",
+          logo: "/assets/images/Skills/ssms.png",
+        },
       ],
       icon: MdArrowForward,
     },
@@ -68,14 +93,16 @@ export const content: Record<'en' | 'vi' | 'ja', Content> = {
     },
 
     projects: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
       title: "Projects",
       subtitle: "MY CREATIONS",
       project_content: [
         {
           title: "Client Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
           githublink: "https://github.com/mkang10/funkytown-web-client",
           demo: "https://funkytown-web-client.vercel.app/",
           description: `
@@ -93,10 +120,11 @@ Customer-facing e-commerce site with features:
         },
         {
           title: "Manager Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-          
+
           description: `
 Unified dashboard for managers & staff:
 - Create import requests
@@ -109,7 +137,8 @@ Unified dashboard for managers & staff:
         },
         {
           title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
           githublink: "https://github.com/mkang10/funkytown-web-owner",
           demo: "https://funkytown-web-owner.vercel.app/",
           description: `
@@ -134,7 +163,7 @@ Full system administration portal for owners:
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
-         {
+        {
           review:
             "“Professional, Dedicated, and Highly Efficient. We deeply appreciate Cuong's work ethic and look forward to working with him on future projects.”",
           img: "/assets/images/Testimonials/logo.png",
@@ -145,14 +174,16 @@ Full system administration portal for owners:
             "“Professional, Dedicated, and Highly Efficient. We deeply appreciate Cuong's work ethic and look forward to working with him on future projects.”",
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
-        }
+        },
       ],
     },
 
     hireme: {
       title: "Hire Me",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
-      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       subtitle: "FOR YOUR PROJECTS",
       para: "Looking for a developer who can build complete systems from scratch? I'm ready to bring your ideas to life.",
       btnText: "My CV",
@@ -162,8 +193,22 @@ Full system administration portal for owners:
       title: "Contact Me",
       subtitle: "GET IN TOUCH",
       social_media: [
-        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
+        {
+          text: "masonkang1212@gmail.com",
+          icon: GrMail,
+          link: "mailto:masonkang1212@gmail.com",
+        },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
+        {
+          text: "kang_dev12",
+          icon: BiLogoInstagram,
+          link: "https://www.instagram.com/kang_dev12/",
+        },
+        {
+          text: "mason.kang8",
+          icon: BiLogoTiktok,
+          link: "https://www.tiktok.com/@mason.kang8/",
+        },
       ],
       successMessage: "Email sent successfully!",
       errorMessage: "Error: ",
@@ -172,7 +217,7 @@ Full system administration portal for owners:
         emailPlaceholder: "Your Email",
         messagePlaceholder: "Your Message",
         btnText: "Send Message",
-      }
+      },
     },
 
     footer: {
@@ -194,8 +239,10 @@ Full system administration portal for owners:
       firstName: "MANH",
       LastName: "CUONG",
       btnText: "CV của tôi",
-      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       hero_content: [
         { count: "Đại học FPT", text: "Đã Tốt Nghiệp" },
         { count: "6+", text: "Dự án đã hoàn thành" },
@@ -206,12 +253,36 @@ Full system administration portal for owners:
       title: "Kỹ Năng",
       subtitle: "KỸ NĂNG NỔI BẬT",
       skills_content: [
-        { name: "C#", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/net.png" },
-        { name: "Node js", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/node.png" },
-        { name: "React js", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/react.png" },
-        { name: "Next js", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/next.jpg" },
-        { name: "My Sql", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/sql.png" },
-        { name: "MS sql server", para: "Văn bản giả lập Lorem ipsum", logo: "/assets/images/Skills/ssms.png" },
+        {
+          name: "C#",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/net.png",
+        },
+        {
+          name: "Node js",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/node.png",
+        },
+        {
+          name: "React js",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/react.png",
+        },
+        {
+          name: "Next js",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/next.jpg",
+        },
+        {
+          name: "My Sql",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/sql.png",
+        },
+        {
+          name: "MS sql server",
+          para: "Văn bản giả lập Lorem ipsum",
+          logo: "/assets/images/Skills/ssms.png",
+        },
       ],
       icon: MdArrowForward,
     },
@@ -239,14 +310,16 @@ Full system administration portal for owners:
     },
 
     projects: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
       title: "Dự Án",
       subtitle: "SẢN PHẨM CỦA TÔI",
       project_content: [
         {
           title: "Client Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
           githublink: "https://github.com/mkang10/funkytown-web-client",
           demo: "https://funkytown-web-client.vercel.app/",
           description: `
@@ -264,10 +337,11 @@ Website thương mại điện tử cho khách hàng:
         },
         {
           title: "Manager Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-         
+
           description: `
 Bảng điều khiển chung cho quản lý & nhân viên:
 - Tạo yêu cầu nhập hàng
@@ -280,10 +354,11 @@ Bảng điều khiển chung cho quản lý & nhân viên:
         },
         {
           title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
           githublink: "https://github.com/mkang10/funkytown-web-owner",
           demo: "https://funkytown-web-owner.vercel.app/",
-           description: `
+          description: `
 Cổng quản trị hệ thống cho chủ cửa hàng:
 - Xem, tạo & cập nhật sản phẩm
 - Nhập kho về kho trung tâm
@@ -305,25 +380,27 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
-         {
+        {
           review:
             "“Chuyên nghiệp, tận tâm và hiệu quả, chúng tôi đánh giá rất cao tinh thần làm việc của Cường và chắc chắn sẽ tiếp tục hợp tác trong các dự án sắp tới.”",
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
-         {
+        {
           review:
             "“Chuyên nghiệp, tận tâm và hiệu quả, chúng tôi đánh giá rất cao tinh thần làm việc của Cường và chắc chắn sẽ tiếp tục hợp tác trong các dự án sắp tới.”",
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
-        }
+        },
       ],
     },
 
     hireme: {
-            image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
 
-      cvLink :"https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       title: "Là Chìa Khoá",
       subtitle: "CHO DỰ ÁN CỦA BẠN",
       para: "Bạn đang tìm một lập trình viên có thể xây dựng hệ thống từ A đến Z? Tôi sẵn sàng biến ý tưởng của bạn thành hiện thực.",
@@ -334,10 +411,14 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       title: "Liên Hệ",
       subtitle: "KẾT NỐI VỚI TÔI",
       social_media: [
-        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
+        {
+          text: "masonkang1212@gmail.com",
+          icon: GrMail,
+          link: "mailto:masonkang1212@gmail.com",
+        },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
       ],
-     successMessage: "Gửi email thành công!",
+      successMessage: "Gửi email thành công!",
       errorMessage: "Lỗi: ",
       form: {
         namePlaceholder: "Tên của bạn",
@@ -351,7 +432,7 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       text: "© Bản quyền 2025 thuộc về Mạnh Cường",
     },
   },
-  
+
   ja: {
     nav: [
       { link: "#home", icon: TbSmartHome },
@@ -366,8 +447,10 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       firstName: "マソン",
       LastName: "カン",
       btnText: "履歴書",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
-      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       hero_content: [
         { count: "FPT大学", text: "卒業" },
         { count: "6+", text: "システム開発プロジェクト完了" },
@@ -378,12 +461,36 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       title: "スキル",
       subtitle: "私のトップスキル",
       skills_content: [
-        { name: "C#", para: "ダミーテキスト", logo: "/assets/images/Skills/net.png" },
-        { name: "Node js", para: "ダミーテキスト", logo: "/assets/images/Skills/node.png" },
-        { name: "React js", para: "ダミーテキスト", logo: "/assets/images/Skills/react.png" },
-        { name: "Next js", para: "ダミーテキスト", logo: "/assets/images/Skills/next.jpg" },
-        { name: "My Sql", para: "ダミーテキスト", logo: "/assets/images/Skills/sql.png" },
-        { name: "MS sql server", para: "ダミーテキスト", logo: "/assets/images/Skills/ssms.png" },
+        {
+          name: "C#",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/net.png",
+        },
+        {
+          name: "Node js",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/node.png",
+        },
+        {
+          name: "React js",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/react.png",
+        },
+        {
+          name: "Next js",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/next.jpg",
+        },
+        {
+          name: "My Sql",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/sql.png",
+        },
+        {
+          name: "MS sql server",
+          para: "ダミーテキスト",
+          logo: "/assets/images/Skills/ssms.png",
+        },
       ],
       icon: MdArrowForward,
     },
@@ -411,13 +518,15 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
     },
 
     projects: {
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
       title: "プロジェクト",
       subtitle: "私の作品",
       project_content: [
         {
           title: "Client Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004800/img3_skqlb7.png",
           githublink: "https://github.com/mkang10/funkytown-web-client",
           demo: "https://funkytown-web-client.vercel.app/",
           description: `
@@ -435,10 +544,11 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
         },
         {
           title: "Manager Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004805/img4_zvjazo.png",
           githublink: "https://github.com/mkang10/funkytown-web-manager",
           demo: "https://funkytown-web-manager.vercel.app/",
-          
+
           description: `
 管理者・スタッフ共用ダッシュボード機能：
 - 入庫リクエスト作成
@@ -447,11 +557,12 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
 - 返品/交換レシート処理
 - (管理者のみ) 顧客注文処理、出庫・入庫
 - (スタッフのみ) 注文・出庫・入庫業務実行
-          `
+          `,
         },
         {
           title: "Owner Funky Website",
-          image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
+          image:
+            "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748004615/img2_zpnxqy.png",
           githublink: "https://github.com/mkang10/funkytown-web-owner",
           demo: "https://funkytown-web-owner.vercel.app/",
           description: `
@@ -471,7 +582,8 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       subtitle: "クライアントレビュー",
       testimonials_content: [
         {
-          review: "「プロフェッショナルで献身的、非常に効率的です。彼の働きぶりに深く感謝しており、今後のプロジェクトでもぜひ一緒に仕事をしたいです。」",
+          review:
+            "「プロフェッショナルで献身的、非常に効率的です。彼の働きぶりに深く感謝しており、今後のプロジェクトでもぜひ一緒に仕事をしたいです。」",
           img: "/assets/images/Testimonials/logo.png",
           name: "Funky Town",
         },
@@ -481,8 +593,10 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
 
     hireme: {
       title: "採用依頼",
-      image: "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
-      cvLink: "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
+      image:
+        "https://res.cloudinary.com/dvbbfcxdz/image/upload/v1748496558/Kang_oc9fyj.png",
+      cvLink:
+        "https://www.topcv.vn/xem-cv/WlgOV1tRXwFVUlwEVVBcAVZaAglWBVJUUQdVDQa478",
       subtitle: "あなたのプロジェクトのために",
       para: "システムをゼロから構築できる開発者をお探しですか？アイデアを形にする準備はできています。",
       btnText: "履歴書",
@@ -492,7 +606,11 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       title: "お問い合わせ",
       subtitle: "ご連絡はこちら",
       social_media: [
-        { text: "masonkang1212@gmail.com", icon: GrMail, link: "mailto:masonkang1212@gmail.com" },
+        {
+          text: "masonkang1212@gmail.com",
+          icon: GrMail,
+          link: "mailto:masonkang1212@gmail.com",
+        },
         { text: "+84 937 289 384", icon: MdCall, link: "tel:+84937289384" },
       ],
       successMessage: "メールが正常に送信されました！",
@@ -509,5 +627,4 @@ Cổng quản trị hệ thống cho chủ cửa hàng:
       text: "© 2025 Mạnh Cường. 無断転載を禁じます。",
     },
   },
- 
-}
+};
